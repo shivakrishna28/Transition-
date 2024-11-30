@@ -1,0 +1,5 @@
+app.post('/evaluate', async (req, res) => {
+    const data = await fetchData(API_URL);
+    const results = evaluateChecklist(data, rules);
+    res.json(results);
+});
